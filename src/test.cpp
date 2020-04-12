@@ -128,7 +128,7 @@ void testStringParser(const std::string &startTag,const std::string &endTag){
 	//deallocated in the destructor
 	String_to_pointer stp(TEST_STRING);
 	pChar = stp.getPointerToStringBegginning();
-	
+
 	try{
 		EXPECT_EQ (SUCCESS, sp.getDataBetweenTags(pChar, mv),"10",FIVE_POINTS);
 	} catch (...) {cout<<"Threw exception 10 "<<endl;}
@@ -170,7 +170,7 @@ void testStringParser(const std::string &startTag,const std::string &endTag){
 	try{
 		EXPECT_EQ (SUCCESS, sp.getDataBetweenTags(pChar, mv),"18",FIVE_POINTS);
 	} catch (...) {cout<<"Threw exception 18 "<<endl;}
-		
+
 	EXPECT_EQ (0, mv.size(),"19",FIVE_POINTS);
 
 	//make sure they made a deep copy of the tags

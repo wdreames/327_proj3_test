@@ -36,11 +36,8 @@ int typicalrun(string &inputfile,string &startTag,string &endTag,string &outputf
 int main(int argc, char *argv[]){
 
 	vector<string> myStrings;
-	int iret = SUCCESS;
 
-	//TODO verify that correct number of params are entered
-	//TODO otherwise return output WRONG_NUMB_ARGS and return FAIL_WRONG_NUMBER_ARGS
-	//expect progname infile passfile failfile   //program and 3 arguments, argc=4
+	//expect progname inputfile starttag endtag outputfile   //program and 4 arguments, argc=5
 	if( argc != EXPECTED_NUMBER_ARGUMENTS ) {
 	   cout<< WRONG_NUMB_ARGS <<endl;
 	   return FAIL_WRONG_NUMBER_ARGS;
@@ -59,7 +56,9 @@ int main(int argc, char *argv[]){
 
 	cout<<"Final grade is:"<<getScore()<<endl;
 
-	typicalrun(inputfile,startTag,endTag,outputfile);
+	int iret = typicalrun(inputfile,startTag,endTag,outputfile);
+
+	return iret;
 }
 
 
@@ -99,5 +98,6 @@ int typicalrun(string &inputfile,string &startTag,string &endTag,string &outputf
 
 	//dump to standard output
 	//dumpVecToStdOut(myStrings);
+	return SUCCESS;
 }
 
