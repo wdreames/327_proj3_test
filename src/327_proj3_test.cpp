@@ -1,6 +1,6 @@
 //============================================================================
 // Name        : 327_proj3_test.cpp
-// Author      : 
+// Author      : William Reames
 // Version     :
 // Copyright   : Your copyright notice
 // Description : Hello World in C++, Ansi-style
